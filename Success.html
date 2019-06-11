@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	
+	function SuccessPage(){
+  
+var url = document.location.href,
+       params = url.split('?')[1].split('&'),
+       data = {}, tmp;
+   for (var i = 0, l = params.length; i < l; i++) {
+        tmp = params[i].split('=');
+        data[tmp[0]] = tmp[1];
+   }
+   console.log(data);
+   document.getElementById('data1').innerHTML = "First Name :"+"  "+decodeURIComponent(data.fname);
+   document.getElementById('data2').innerHTML = "Last Name :"+"  "+decodeURIComponent(data.lname);
+   document.getElementById('data3').innerHTML = "Phone number :"+"  "+decodeURIComponent(data.pnumber);
+   document.getElementById('data4').innerHTML = "Email :"+"  "+decodeURIComponent(data.email);
+   document.getElementById('data5').innerHTML = "Gender :"+"  "+decodeURIComponent(data.gender);
+   document.getElementById('data6').innerHTML = "Skills :"+"  "+decodeURIComponent(data.langg	);
+   document.getElementById('data6').innerHTML = "Country :"+"  "+decodeURIComponent(data.country);
+}
+
+</script>
+</head>
+<body onload="SuccessPage()">
+	<h1 style="color: red">Form Validation Success</h1>
+	<p id="data1"></p>
+	<p id="data2"></p>
+	<p id="data3"></p>
+	<p id="data4"></p>
+	<p id="data5"></p>
+	<p id="data6"></p>
+	<p id="data7"></p>
+</body>
+</html>

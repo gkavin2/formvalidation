@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FormValidation</title>
+
+</head>
+<body>  
+<form action="Success.html" onsubmit="return validation()" method="GET" name="signup_form" enctype="multipart/data"  >
+  <h2>Form Validation</h2>
+    <table>
+      <tr>
+        <td><p>FirstName:<p></td>
+        <td>
+          <input type="text" onkeypress="return event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode >= 97 && event.keyCode <= 122  || event.keyCode == 95 || event.keyCode == 45 || event.keyCode >= 48 && event.keyCode <= 57"   name="fname" id="fname">
+            <span id="fname_err" style="color: red"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><p>LastName:</p>
+        </td>
+        <td>
+          <input type="text"onkeypress="return event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode >= 97 && event.keyCode <= 122  || event.keyCode == 95 || event.keyCode == 45 || event.keyCode >= 48 && event.keyCode <= 57"  name="lname" id="lname" class="input_text" value="" maxlength ="32">
+        <span id="lname_err" style="color: red"></span></td>
+      </tr>
+      <tr>
+        <td><p>PhoneNumber:</p></td>
+        <td>
+          <!-- <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57"  name="mobile" id="mobile" maxlength="10"> -->
+           <input type="text" onkeypress="return event.keyCode >= 48 && event.keyCode <= 57" name="pnumber" id="pnumber" class="input_text"  value="" maxlength ="12"> 
+      <span id="pnumber_err" style="color: red"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><p>Email:</p></td>
+        <td>
+          <input type="email" name="email" id="email" class="input_text" value="">
+        <span id="email_err" style="color: red"></span>
+        </td> 
+      </tr>
+      <tr>
+       
+        <td><p>Gender:</p></td>
+          <td>
+            <label><input type="radio" name="gender" id="gen" value="male">male</label>
+          <label><input type="radio" name="gender" id="gen1" value="female">female</label>
+          <span id="gender_err" style="color: red"></span>
+          </td>
+     
+      </tr>
+      <tr>
+        <td><p>Language known:</p></td>
+        <td>
+        <label><input type="checkbox" name="langg[]" class="lang" value="C">C</label>
+         <label><input type="checkbox" name="langg[]" class="lang" value="Java">Java</label>
+        <label><input type="checkbox" name="langg[]" class="lang" value="Phython">Phython</label>
+        <label><input type="checkbox" name="langg[]" class="lang" value="PHP">PHP</label>
+             <span id="lang_err" style="color: red"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><p>Country:</p></td>
+        <td><select id="select" class="input_select" name="country">
+        <option value="">Select</option>
+        <option value="INDIA">INDIA</option>
+        <option value="SRILANKA">SRILANKA</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        <option value="U.S.A">U.S.A</option>
+        </select>
+        <span id="select_err" style="color: red"></span>
+        </td>
+      </tr>
+        <tr><td></td>
+        <td><input type="submit" name="submit" id="input_submit">
+        <input type="reset" name="reset" id="input_reset" ></td>
+      </tr>
+  </table>
+</form>
+
+
+
+<script type="text/javascript" src="final.js">
+
+</script>
+
+</body>
+</html>
